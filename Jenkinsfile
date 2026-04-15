@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh 'python -m pip install -r requirements.txt'
+                bat 'python -m pip install -r requirements.txt'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'pytest --junitxml=report.xml'
+                bat 'pytest --junitxml=report.xml'
             }
         }
 
