@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                bat 'python -m pip install -r requirements.txt'
+                bat '"C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'pytest --junitxml=report.xml'
+                bat '"C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pytest --junitxml=report.xml'
             }
         }
 
